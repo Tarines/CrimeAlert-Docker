@@ -1,0 +1,35 @@
+Started GET "/" for 127.0.0.1 at 2021-05-16 12:43:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/com2025/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (2.4ms)
+Completed 200 OK in 6939ms (Views: 6935.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/locations/new" for 127.0.0.1 at 2021-05-16 12:43:51 +0100
+Processing by LocationsController#new as HTML
+  Rendering locations/new.html.erb within layouts/application
+  Rendered locations/_form.html.erb (537.4ms)
+  Rendered locations/new.html.erb within layouts/application (538.3ms)
+  Rendered shared/_navbar.html.erb (1.2ms)
+Completed 200 OK in 624ms (Views: 601.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/locations" for 127.0.0.1 at 2021-05-16 12:43:54 +0100
+Processing by LocationsController#index as HTML
+  Rendering locations/index.html.erb within layouts/application
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE (city LIKE '%%')[0m
+  ↳ app/views/locations/index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Location"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/locations/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Location"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/locations/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Location"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/locations/index.html.erb:18
+  Rendered locations/index.html.erb within layouts/application (28.7ms)
+  Rendered shared/_navbar.html.erb (0.9ms)
+Completed 200 OK in 138ms (Views: 136.2ms | ActiveRecord: 1.0ms)
+
+
